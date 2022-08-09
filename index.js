@@ -1,13 +1,13 @@
 class User {
-    _id;
+    #id;
     name;
     age;
-    static #NAMES = [];
+    static NAMES = [];
 
     constructor(name, age) {
         if (User.NAMES.indexOf(name) == -1) {
             User.NAMES.push(name);
-            this._id = Math.round(Math.random() * 10);
+            this.#id = Math.round(Math.random() * 10);
             this.name = name;
             this.age = age;
         }
